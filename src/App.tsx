@@ -1,25 +1,19 @@
-import { AddTodo } from './components/AddTodo'
-import { ClearAllBtn } from './components/ClearAllBtn'
-import { AppSection } from './components/ComponentStyle'
-import { HeaderComp } from './components/HeaderComp'
-import { Navber } from './components/Navber'
-import { TodoList } from './components/TodoList'
-import { TodoData } from './storage/Todos'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { DataSource } from "./data/actions/DataSource";
+import { HomeLayout } from "./data/pages/Home";
+import { PokemonDetailInfo } from "./data/pages/PokemonDetail";
 
-export const AppLayout = () => {
-  return(
-    <>
-    <TodoData>
-      <section className={AppSection}>
-          <HeaderComp/>
-          <AddTodo/>
-          <Navber/>
-          <TodoList/>
-          <ClearAllBtn/>
-      </section>
-    </TodoData>
-    </>
-  )
-}
+const App = () => {
+  return (
+    <DataSource>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomeLayout />} />
+          <Route path="/pokemon/:name" element={<PokemonDetailInfo />} />
+        </Routes>
+      </Router>
+    </DataSource>
+  );
+};
 
-export default AppLayout
+export default App;
