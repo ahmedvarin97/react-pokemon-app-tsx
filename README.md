@@ -1,69 +1,72 @@
-# React + TypeScript + Vite
+# ⚡ React Pokémon App (TSX)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Pokémon browser built with **React**, featuring search, type filters, and clean, responsive UI powered by the free **PokéAPI**.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo  
+👉 https://react-pokemon-app-tsx.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧰 Repository  
+👉 https://github.com/ahmedvarin97/react-pokemon-app-tsx.git
 
-## Expanding the ESLint configuration
+## ✨ Features
+- 🔎 **Search Pokémon** by name with instant feedback  
+- 📄 **Detail View** with sprite, stats, and abilities  
+- 📱 **Responsive UI** for mobile, tablet, and desktop  
+- ⚡ **Fast & Lightweight** front-end (client-side fetch from PokéAPI)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+> Note: Data is fetched from the public PokéAPI. No API key is required.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧰 Tech Stack
+- **Frontend:** React (TSX)  
+- **Build Tool:** Vite (or CRA—depending on the repo setup)  
+- **Styling:** CSS / Tailwind (based on repo)  
+- **API:** PokéAPI (https://pokeapi.co)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 📦 Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
+- **Node.js** v18+  
+- **npm** v9+ (or **yarn/pnpm**)
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/ahmedvarin97/react-pokemon-app-jsx.git
+cd react-pokemon-app-jsx
+
+# Install dependencies
+npm install
+
+# Start the dev server
+npm run dev 
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🏗️ Build for Production
+```bash
+npm run build
+npm run preview
 ```
+
+## ⚙️ Environment Variables
+No environment variables are required for basic usage.
+If you later add features like image CDNs or rate-limited proxies, document them here.
+
+## 🗂️ Project Structure
+```bash
+src/
+ ├── components/       # UI components (Card, SearchBar, TypeFilter, etc.)
+ ├── App.jsx
+ └── main.jsx
+```
+
+## 🚀 Deployment (Vercel)
+This app is deployed on Vercel.
+- Push the repo to GitHub
+- Import the project in Vercel
+- Build Command: npm run build
+- Output Directory: dist
+- Set env vars if you add any later
+
+## 🖼️ Screenshots
+<img width="1905" height="2738" alt="ead9e2f1-b97c-43f6-8d2b-14d33bddaa83" src="https://github.com/user-attachments/assets/e93b5915-aefe-41dd-a38f-b2537421cc68" />
+
